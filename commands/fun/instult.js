@@ -20,10 +20,10 @@ module.exports = {
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error));
 
-        console.log(`https://insult.mattbas.org/api/insult.txt?who=${args[1]}`);
+        console.log(`https://insult.mattbas.org/api/insult.txt?who=${args[0]}`);
 
         request({
-            url: `https://insult.mattbas.org/api/insult.txt?who=${args[1]}`,
+            url: `https://insult.mattbas.org/api/insult.txt?who=${args[0]}`,
             json: true
         }, (err, response, body) => {
             console.log(response.statusCode.toString());
@@ -38,7 +38,6 @@ module.exports = {
             const embed = new MessageEmbed()
                 .setColor(roleColor)
                 .setDescription(body)
-                .setImage(client.user.displayAvatarURL());
 
             message.channel.send(embed);
         });
