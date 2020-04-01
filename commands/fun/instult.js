@@ -16,7 +16,7 @@ module.exports = {
             .catch(console.error);
 
         if (args.length < 1)
-            return message.reply('Requires a name!').then(m => m.delete()
+            return message.reply('Requires a name!').then(m => m.delete(5000)
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error));
 
