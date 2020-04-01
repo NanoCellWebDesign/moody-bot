@@ -20,7 +20,7 @@ client.on("ready", () => {
     console.log(`${client.user.username} is now online!`);
 
     // Set the client user's presence
-    client.user.setPresence({ activity: { name: 'Being Developed' }, status: 'active' })
+    client.user.setPresence({ activity: { name: 'Being Developed By NanoCellMusic' }, status: 'active' })
 });
 
 client.on("message", async message => {    
