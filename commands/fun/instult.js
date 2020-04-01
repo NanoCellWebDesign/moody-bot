@@ -27,7 +27,7 @@ module.exports = {
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error));
 
-        console.log(`https://insult.mattbas.org/api/insult.txt?who=${rMember.name}`);
+        console.log(rMember);
 
         request({
             url: `https://insult.mattbas.org/api/insult.txt?who=${rMember.name}`,
