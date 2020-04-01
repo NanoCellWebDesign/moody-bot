@@ -44,7 +44,7 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setColor(roleColor)
-                .setDescription(body)
+                .setDescription(`@${body}`)
 
             message.channel.send(embed);
         });
