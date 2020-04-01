@@ -27,10 +27,10 @@ module.exports = {
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error));
 
-        console.log(`https://insult.mattbas.org/api/insult.txt?who=${rMember}`);
+        console.log(`https://insult.mattbas.org/api/insult.txt?who=${rMember.username}`);
 
         request({
-            url: `https://insult.mattbas.org/api/insult.txt?who=${rMember}`,
+            url: `https://insult.mattbas.org/api/insult.txt?who=${rMember.username}`,
             json: true
         }, (err, response, body) => {
             console.log(response.statusCode.toString());
