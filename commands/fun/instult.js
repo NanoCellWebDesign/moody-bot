@@ -32,10 +32,10 @@ module.exports = {
 
         let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
 
-        console.log(`https://insult.mattbas.org/api/insult.txt?who=${rMember.user.username}`);
+        console.log(`https://insult.mattbas.org/api/insult.txt?who=${rMember}`);
 
         request({
-            url: `https://insult.mattbas.org/api/insult.txt?who=${rMember.user.username}`,
+            url: `https://insult.mattbas.org/api/insult.txt?who=${rMember}`,
             json: true
         }, (err, response, body) => {
             console.log(response.statusCode.toString());
