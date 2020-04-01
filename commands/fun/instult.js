@@ -30,7 +30,7 @@ module.exports = {
         console.log(rMember);
 
         request({
-            url: `https://insult.mattbas.org/api/insult.txt?who=${rMember.name}`,
+            url: `https://insult.mattbas.org/api/insult.txt?who=${rMember.user.username}`,
             json: true
         }, (err, response, body) => {
             console.log(response.statusCode.toString());
