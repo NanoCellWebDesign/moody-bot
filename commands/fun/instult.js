@@ -20,17 +20,12 @@ module.exports = {
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error));
 
+        let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
+
         if (!rMember)
             return message.reply("Couldnt find that person").then(m => m.delete()
                 .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error));
-
-        if (rMember.hasPermission("BAN_MEMBERS") || rMember.user.bot)
-            return message.reply("Can't report that member").then(m => m.delete()
-                .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-                .catch(console.error));
-
-        let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         console.log(`https://insult.mattbas.org/api/insult.txt?who=${rMember}`);
 
