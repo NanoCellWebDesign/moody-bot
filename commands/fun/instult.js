@@ -40,7 +40,7 @@ module.exports = {
                     .catch(console.error));
             }
 
-            console.log(body);
+                console.log(`${ rMember } ${ body }`);
 
             const embed = new MessageEmbed()
                 .setColor(roleColor)
