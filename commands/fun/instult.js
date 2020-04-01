@@ -5,9 +5,9 @@ const request = require("request");
 module.exports = {
     name: "insult",
     aliases: ["i",],
-    category: "bbxcentral",
-    description: "Returns all users, or one specific users info",
-    usage: "< user_name >",
+    category: "fun",
+    description: "Insults a member",
+    usage: "< mention >",
     run: async (client, message, args) => {
         const roleColor = "#0facf3";
 
